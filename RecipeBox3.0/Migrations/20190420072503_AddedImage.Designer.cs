@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RecipeBox3._0.Data;
 
 namespace RecipeBox3._0.Migrations
 {
     [DbContext(typeof(RecipeDbContext))]
-    partial class RecipeDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190420072503_AddedImage")]
+    partial class AddedImage
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -27,11 +29,13 @@ namespace RecipeBox3._0.Migrations
 
                     b.Property<byte[]>("Content");
 
-                    b.Property<string>("ContentType");
+                    b.Property<string>("ContentType")
+                        .HasMaxLength(100);
 
-                    b.Property<string>("FileType");
+                    b.Property<int>("FileType");
 
-                    b.Property<string>("ImageName");
+                    b.Property<string>("ImageName")
+                        .HasMaxLength(255);
 
                     b.Property<int>("RecipeId");
 
