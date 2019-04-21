@@ -2,9 +2,9 @@
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace RecipeBox3._0.Data.Migrations
+namespace Domain.Migrations
 {
-    public partial class CreateIdentitySchema : Migration
+    public partial class initial_JH : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

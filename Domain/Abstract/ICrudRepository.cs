@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using RecipeBox3._0.Models;
 using System.Text;
 
-namespace RecipeBox3._0.Models.Abstract
+namespace Domain.Abstract
 {
     public interface ICrudRepository<T>
     {

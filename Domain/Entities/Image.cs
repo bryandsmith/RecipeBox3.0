@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace RecipeBox3._0.Models
+namespace Domain.Entities
 {
     // JH - Removed unmapped struct from models folder and changed the "FileType"
     // To string, Enum not needed for so little options use a List<SelectListItem> instead

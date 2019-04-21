@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Domain.Abstract;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using RecipeBox3._0.Models;
+using Domain.Entities;
 using RecipeBox3._0.ViewModels;
 
 namespace RecipeBox3._0.Controllers

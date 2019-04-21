@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 using System.Collections.Generic;
-using RecipeBox3._0.Models;
+using Domain.Entities;
 using System.Text;
 
 namespace Domain.Abstract

@@ -10,17 +10,16 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using RecipeBox3._0.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using RecipeBox3._0.Services;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.Extensions.Options;
 using System.Data.SqlClient;
-using RecipeBox3._0.Models.Abstract;
-using RecipeBox3._0.Models.Concrete;
-using RecipeBox3._0.Models;
 using Domain.Abstract;
+using Domain.Concrete;
+using Domain.DataContexts;
+using Domain.Entities;
 
 namespace RecipeBox3._0
 {
@@ -30,13 +29,13 @@ namespace RecipeBox3._0
         {
             Configuration = configuration;
         }
-        private string _connection = null;
-        private string _connectionTwo = null;
+        private string _connection;
+        private string _connectionTwo;
         public IConfiguration Configuration { get; }
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var builder = new SqlConnectionStringBuilder(Configuration.GetConnectionString("ApplicationDbContextConnection"));
+            var builder = new SqlConnectionStringBuilder(Configuration.GetConnectionString("AuthenticationDbContextConnection"));
             builder.Password = Configuration["recipePwd"];
             _connection = builder.ConnectionString;
             var builderTwo = new SqlConnectionStringBuilder(Configuration.GetConnectionString("RecipeDbContextConnection"));
@@ -67,11 +66,11 @@ namespace RecipeBox3._0
                 options.RedirectStatusCode = StatusCodes.Status307TemporaryRedirect;
                 options.HttpsPort = 5001;
             });
-            services.AddDbContext<ApplicationDbContext>(options =>
+            services.AddDbContext<AuthenticationDbContext>(options =>
                 options.UseSqlServer(_connection));
              services.AddDefaultIdentity<IdentityUser>()
             .AddDefaultUI(UIFramework.Bootstrap4)
-            .AddEntityFrameworkStores<ApplicationDbContext>();
+            .AddEntityFrameworkStores<AuthenticationDbContext>();
             services.AddDbContext<RecipeDbContext>(options =>
             {
                 options.UseSqlServer(_connectionTwo);

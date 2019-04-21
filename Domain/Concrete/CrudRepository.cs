@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Text;
-using RecipeBox3._0.Models;
-using RecipeBox3._0.Models.Abstract;
-using RecipeBox3._0.Data;
+using Domain.DataContexts;
+using Domain.Abstract;
+using Domain.Entities;
 
-namespace RecipeBox3._0.Models.Concrete
+namespace Domain.Concrete
 {
     public class CrudRepository : ICrudRepository<Recipe>
     {

@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using RecipeBox3._0.Data;
-using RecipeBox3._0.Models;
+using Domain.DataContexts;
+using Domain.Entities;
 
 namespace RecipeBox3._0.Controllers
 {

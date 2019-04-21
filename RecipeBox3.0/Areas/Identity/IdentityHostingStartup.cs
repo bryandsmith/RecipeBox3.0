@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using RecipeBox3._0.Data;
 
 [assembly: HostingStartup(typeof(RecipeBox3._0.Areas.Identity.IdentityHostingStartup))]
 namespace RecipeBox3._0.Areas.Identity

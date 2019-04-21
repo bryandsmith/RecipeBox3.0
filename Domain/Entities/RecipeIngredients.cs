@@ -4,7 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-namespace RecipeBox3._0.Models
+
+namespace Domain.Entities
 {
     public class RecipeIngredients
     {

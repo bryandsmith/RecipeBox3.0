@@ -6,9 +6,9 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.SqlServer;
-using RecipeBox3._0.Models;
+using Domain.Entities;
 
-namespace RecipeBox3._0.Data
+namespace Domain.DataContexts
 {
     // JH- Removed the "Base: ModelBuilder" from OnModelCreating and explictly set ToTable foreach required Enitity 
     public class RecipeDbContext : DbContext
