@@ -6,43 +6,42 @@
 # Requirements
 
 1. Manage user accounts
-..1. Secure user passwords
-..2. Allow multi-factor authentication
-..3. Confirm accounts via Email
-..4. Encrypt user data at rest
+  1. Secure user passwords
+  2. Allow multi-factor authentication
+  3. Confirm accounts via Email
+  4. Encrypt user data at rest
 2. Personal Page
-..1. Page shows user's recipes
-..2. User can add new recipe
-..3. User can edit recipe
-..4. User can remove recipe
-..5. Recipes for other users not shown
-..6. User cannot add or edit unless logged in
-..7. User can mark recipe to publish
+  1. Page shows user's recipes
+  2. User can add new recipe
+  3. User can edit recipe
+  4. User can remove recipe
+  5. Recipes for other users not shown
+  6. User cannot add or edit unless logged in
+  7. User can mark recipe to publish
 2. Users
-..1. Users can create account
-..2. Users can log in to their account
-..3. Users can log out of their account
+  1. Users can create account
+  2. Users can log in to their account
+  3. Users can log out of their account
 3. Published
-..1. Recipes will display if marked published
-..2. Recipes will be removed if published is unchecked
-<br/>
-#Currently Implemented
-###Azure SQL Server with 2 databases
+  1. Recipes will display if marked published
+  2. Recipes will be removed if published is unchecked
+# Currently Implemented
+### Azure SQL Server with 2 databases
 1. Application Database
 Used to store user created data such as recipes and ingredients. Contains all data and tables required for business logic.
-<br/>
+
 2. User Authentication Database
 Contains all the ASP.NET Identity tables and user information, maintained separately from the application database to reduce how often user data is in transit.
-<br/>
+
 3. Entity Framework Core
 Code first model scaffolding to keep precise entity relationships. Grants users permission to utilize CRUD operations in order to store their customized recipes.
-<br/>
+
 4. User-Secrets Manager
 Protect application secrets in the producation environment.
-<br/>
+
 5. ASP.NET IDENTITY (full UI scaffolded to add further constraints to account behavior)
 Safe user account management as to avoid writing my own hash algorithms and improperly storing user passwords. The full suite of functions is not currently being utilized, future implementations may occur as needed.
-<br/>
+
 6. SendGrid API
 Allows accounts to be confirmed through email confirmation.
 <br/>
