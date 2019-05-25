@@ -1,10 +1,10 @@
 # RecipeBox
 ##### An ASP.Net Core 2.2 Web Application, which utilizes various Azure services to create an interactive recipe organiztion solution
-<br/>
+
 ##### The purpose of this application is to implement and familiarize myself with as many Azure services as possible
-<br/>
+
 # Requirements
-<br/>
+
 1. Manage user accounts
 ..1. Secure user passwords
 ..2. Allow multi-factor authentication
