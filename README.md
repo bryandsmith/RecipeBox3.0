@@ -6,10 +6,10 @@
 # Requirements
 
 1. Manage user accounts
-  1. Secure user passwords
-  2. Allow multi-factor authentication
-  3. Confirm accounts via Email
-  4. Encrypt user data at rest
+   1. Secure user passwords
+   2. Allow multi-factor authentication
+   3. Confirm accounts via Email
+   4. Encrypt user data at rest
 2. Personal Page
   1. Page shows user's recipes
   2. User can add new recipe
