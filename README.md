@@ -11,20 +11,20 @@
    3. Confirm accounts via Email
    4. Encrypt user data at rest
 2. Personal Page
-  1. Page shows user's recipes
-  2. User can add new recipe
-  3. User can edit recipe
-  4. User can remove recipe
-  5. Recipes for other users not shown
-  6. User cannot add or edit unless logged in
-  7. User can mark recipe to publish
+   1. Page shows user's recipes
+   2. User can add new recipe
+   3. User can edit recipe
+   4. User can remove recipe
+   5. Recipes for other users not shown
+   6. User cannot add or edit unless logged in
+   7. User can mark recipe to publish
 2. Users
-  1. Users can create account
-  2. Users can log in to their account
-  3. Users can log out of their account
+   1. Users can create account
+   2. Users can log in to their account
+   3. Users can log out of their account
 3. Published
-  1. Recipes will display if marked published
-  2. Recipes will be removed if published is unchecked
+   1. Recipes will display if marked published
+   2. Recipes will be removed if published is unchecked
 # Currently Implemented
 ### Azure SQL Server with 2 databases
 1. Application Database
@@ -44,11 +44,11 @@ Safe user account management as to avoid writing my own hash algorithms and impr
 
 6. SendGrid API
 Allows accounts to be confirmed through email confirmation.
-<br/>
+
 7. BootStrap 4
 Utilized for the basic stylizing and animations of the application.
-<br/>
-#Test Plan
+
+# Test Plan
 |     Requirement             |     Test Method        |         Test Procedures           |      Current Status |
 | ----------------------------|:----------------------:|:---------------------------------:| -------------------:|
 |  Page shows user's recipes  |     Inspection         | Login Successful, page redirects to page that displays recipes | Passed |
